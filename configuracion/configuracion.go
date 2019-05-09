@@ -1,8 +1,8 @@
 package configuracion
 
 type Configuracion struct {
-	ip     string
-	namedb string
+	Ip     string
+	Namedb string
 }
 
 var instance Configuracion
@@ -10,7 +10,7 @@ var instance Configuracion
 func GetInstance() Configuracion {
 
 	instance = Configuracion{}
-	instance.ip = "192.168.30.111"
-	instance.namedb = "faf_multitenant_go"
+	instance.Ip = "192.168.30.111"
+	instance.Namedb = "faf_multitenant_go"
 	return instance
 }
