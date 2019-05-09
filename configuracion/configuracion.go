@@ -16,12 +16,19 @@ var instance Configuracion
 
 func GetInstance() Configuracion {
 
-	instance = Configuracion{}
+	if instance.Ip == "" || instance.Namedb == "" {
+		obtenerDatosConfiguracion()
+	}
+
+	return instance
+}
+
+func obtenerDatosConfiguracion() {
 
 	path, err := os.Executable()
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error: ", err)
 	}
 	dir := filepath.Dir(path)
 
@@ -30,7 +37,7 @@ func GetInstance() Configuracion {
 	file, err := os.Open(filePath)
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error: ", err)
 	}
 
 	decoder := json.NewDecoder(file)
@@ -39,6 +46,4 @@ func GetInstance() Configuracion {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-
-	return instance
 }
