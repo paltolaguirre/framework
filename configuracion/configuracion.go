@@ -1,6 +1,7 @@
 package configuracion
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -24,10 +25,20 @@ func GetInstance() Configuracion {
 	}
 	dir := filepath.Dir(path)
 
-	fmt.Println(path)
-	fmt.Println("dir")
-	fmt.Println(dir)
-	instance.Ip = "192.168.30.111"
-	instance.Namedb = "faf_multitenant_go"
+	filePath := dir + "/configuracion.json"
+
+	file, err := os.Open(filePath)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	decoder := json.NewDecoder(file)
+
+	err = decoder.Decode(&instance)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+
 	return instance
 }
