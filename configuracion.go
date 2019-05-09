@@ -10,15 +10,15 @@ var instance configuracion
 func GetInstance() configuracion {
 
 	instance = configuracion{} // <--- NOT THREAD SAFE
-	instance.ip = getIP()
-	instance.namedb = getNameDB()
+	instance.ip = GetIP()
+	instance.namedb = GetNameDB()
 	return instance
 }
 
-func getIP() string {
+func GetIP() string {
 	return "192.168.30.111"
 }
 
-func getNameDB() string {
+func GetNameDB() string {
 	return "faf_multitenant_go"
 }
