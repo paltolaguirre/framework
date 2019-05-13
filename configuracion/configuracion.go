@@ -10,6 +10,7 @@ import (
 type Configuracion struct {
 	Ip     string
 	Namedb string
+	Url    string
 }
 
 var instance Configuracion
