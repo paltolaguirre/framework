@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 )
 
 type Configuracion struct {
@@ -26,12 +25,14 @@ func GetInstance() Configuracion {
 
 func obtenerDatosConfiguracion() {
 
-	path, err := os.Executable()
+	//comento para poder trabajar con el debug
+	/*path, err := os.Executable()
 
 	if err != nil {
 		fmt.Println("error: ", err)
-	}
-	dir := filepath.Dir(path)
+	}*/
+
+	dir := "/home/paltolaguirre/go/src/github.com/xubiosueldos" //filepath.Dir(path)
 
 	filePath := dir + "/configuracion.json"
 
