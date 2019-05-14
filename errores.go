@@ -5,4 +5,5 @@ const (
 	IdParametroVacio          = "Debe ingresar un ID en la url"
 	DatosIncorrectos          = "Los datos ingresados son incorrectos"
 	LegajoEliminado           = "Se ha eliminado correctamente el legajo con ID: "
+	NovedadEliminada          = "Se ha eliminado correctamente la novedad con ID: "
 )
