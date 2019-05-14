@@ -2,6 +2,7 @@ package framework
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 
@@ -10,18 +11,18 @@ import (
 	"github.com/xubiosueldos/conexionBD"
 )
 
-func ServicioList(w http.ResponseWriter, r *http.Request, servicio interface{}) {
+func ServicioList(w http.ResponseWriter, r *http.Request, servicio interface{}, db *gorm.DB) {
 
 	tokenAutenticacion, tokenError := checkTokenValido(r)
-
+	fmt.Println(tokenAutenticacion)
 	if tokenError != nil {
 		errorToken(w, tokenError)
 		return
 	} else {
 
-		db := obtenerDB(tokenAutenticacion)
+		//db := obtenerDB(tokenAutenticacion)
 
-		defer db.Close()
+		//defer db.Close()
 
 		//Lista todos los legajos
 		db.Find(&servicio)
