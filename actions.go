@@ -11,7 +11,7 @@ import (
 	"github.com/xubiosueldos/conexionBD"
 )
 
-func ServicioList(w http.ResponseWriter, r *http.Request, servicio interface{}, db *gorm.DB) {
+func ServicioList(w http.ResponseWriter, r *http.Request, servicio struct{}, db *gorm.DB) {
 
 	tokenAutenticacion, tokenError := checkTokenValido(r)
 	fmt.Println(tokenAutenticacion)
