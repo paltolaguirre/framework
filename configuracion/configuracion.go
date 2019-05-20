@@ -8,10 +8,13 @@ import (
 )
 
 type Configuracion struct {
-	Ip              string
-	Namedb          string
-	Url             string
-	Checkmonolitico bool
+	Ip                 string
+	Namedb             string
+	Url                string
+	Checkmonolitico    bool
+	Versionlegajo      string
+	Versionnovedad     string
+	Versionliquidacion string
 }
 
 var instance Configuracion
