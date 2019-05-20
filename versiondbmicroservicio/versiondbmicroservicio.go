@@ -19,8 +19,8 @@ func UltimaVersion(nombre string, db *gorm.DB) int {
 
 	var versiondbmicroservicio Versiondbmicroservicio
 
-	//db.First(&versiondbmicroservicio, "nombremicroservicio = ", nombre)
-	db.Where("nombremicroservicio = ? ", nombre).Find(&versiondbmicroservicio)
+	db.First(&versiondbmicroservicio, "nombremicroservicio = ?", nombre)
+	//db.Where("nombremicroservicio = ? ", nombre).Find(&versiondbmicroservicio)
 	return versiondbmicroservicio.Versionmicroservicio
 
 }
@@ -29,7 +29,7 @@ func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombr
 
 	var versiondbmicroservicio Versiondbmicroservicio
 
-	db.First(&versiondbmicroservicio, "nombremicroservicio = ", nombreMicroservicio)
+	db.First(&versiondbmicroservicio, "nombremicroservicio = ?", nombreMicroservicio)
 
 	versiondbmicroservicio.Nombremicroservicio = nombreMicroservicio
 	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
