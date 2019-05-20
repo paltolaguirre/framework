@@ -31,7 +31,6 @@ func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombr
 	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
 	versiondbmicroservicio.Nombremicroservicio = nombremicroservicio
 
-	db.Where("nombremicroservicio = ", nombremicroservicio).FirstOrCreate(&versiondbmicroservicio)
-	//db.Save(&versiondbmicroservicio)
+	db.Save(&versiondbmicroservicio)
 
 }
