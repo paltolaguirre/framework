@@ -11,7 +11,7 @@ type Versiondbmicroservicio struct {
 
 func CrearTablaVersionDBMicroservicio(db *gorm.DB) {
 
-	db.Model(&Versiondbmicroservicio{})
+	db.AutoMigrate(&Versiondbmicroservicio{})
 }
 
 func UltimaVersion(nombre string, db *gorm.DB) int {
