@@ -39,7 +39,11 @@ func obtenerDatosConfiguracion() {
 	file, err := os.Open(filePath)
 
 	if err != nil {
-		fmt.Println("error: ", err)
+		filePath = "/configuracion.json"
+		file, err = os.Open(filePath)
+		if err != nil {
+			fmt.Println("error: ", err)
+		}
 	}
 
 	decoder := json.NewDecoder(file)
