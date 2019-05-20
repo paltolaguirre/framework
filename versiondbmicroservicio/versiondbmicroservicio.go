@@ -23,3 +23,13 @@ func UltimaVersion(nombre string, db *gorm.DB) int {
 	return versiondbmicroservicio.Versionmicroservicio
 
 }
+
+func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombremicroservicio string) {
+
+	var versiondbmicroservicio Versiondbmicroservicio
+	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
+	versiondbmicroservicio.Nombremicroservicio = nombremicroservicio
+
+	db.Save(&versionMicroservicio)
+
+}
