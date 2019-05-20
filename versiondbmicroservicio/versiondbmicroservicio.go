@@ -5,6 +5,7 @@ import (
 )
 
 type Versiondbmicroservicio struct {
+	gorm.Model
 	Nombremicroservicio  string
 	Versionmicroservicio int
 }
@@ -30,6 +31,7 @@ func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombr
 	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
 	versiondbmicroservicio.Nombremicroservicio = nombremicroservicio
 
-	db.Save(&versionMicroservicio)
+	db.Where("nombremicroservicio = ", nombremicroservicio).FirstOrCreate(&versiondbmicroservicio)
+	//db.Save(&versiondbmicroservicio)
 
 }
