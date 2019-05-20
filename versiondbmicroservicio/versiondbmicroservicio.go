@@ -29,10 +29,9 @@ func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombr
 
 	var versiondbmicroservicio Versiondbmicroservicio
 
-	if err := db.First(&versiondbmicroservicio, "nombremicroservicio = ", nombreMicroservicio).Error; gorm.IsRecordNotFoundError(err) {
-		versiondbmicroservicio.Nombremicroservicio = nombreMicroservicio
-	}
+	db.First(&versiondbmicroservicio, "nombremicroservicio = ", nombreMicroservicio)
 
+	versiondbmicroservicio.Nombremicroservicio = nombreMicroservicio
 	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
 
 	db.Save(&versiondbmicroservicio)
