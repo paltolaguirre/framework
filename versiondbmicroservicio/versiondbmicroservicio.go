@@ -5,7 +5,6 @@ import (
 )
 
 type Versiondbmicroservicio struct {
-	gorm.Model
 	Nombremicroservicio  string
 	Versionmicroservicio int
 }
@@ -25,11 +24,11 @@ func UltimaVersion(nombre string, db *gorm.DB) int {
 
 }
 
-func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombremicroservicio string) {
+func ActualizarVersionMicroservicio(db *gorm.DB, versionMicroservicio int, nombreMicroservicio string) {
 
 	var versiondbmicroservicio Versiondbmicroservicio
 	versiondbmicroservicio.Versionmicroservicio = versionMicroservicio
-	versiondbmicroservicio.Nombremicroservicio = nombremicroservicio
+	versiondbmicroservicio.Nombremicroservicio = nombreMicroservicio
 
 	db.Save(&versiondbmicroservicio)
 
