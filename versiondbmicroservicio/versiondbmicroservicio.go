@@ -6,7 +6,7 @@ import (
 
 type Versiondbmicroservicio struct {
 	Nombremicroservicio  string
-	Versionmicroservicio string
+	Versionmicroservicio int
 }
 
 func CrearTablaVersionDBMicroservicio(db *gorm.DB) {
@@ -14,7 +14,7 @@ func CrearTablaVersionDBMicroservicio(db *gorm.DB) {
 	db.Model(&Versiondbmicroservicio{})
 }
 
-func UltimaVersion(nombre string, db *gorm.DB) string {
+func UltimaVersion(nombre string, db *gorm.DB) int {
 
 	var versiondbmicroservicio Versiondbmicroservicio
 

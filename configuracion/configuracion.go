@@ -12,9 +12,9 @@ type Configuracion struct {
 	Namedb             string
 	Url                string
 	Checkmonolitico    bool
-	Versionlegajo      string
-	Versionnovedad     string
-	Versionliquidacion string
+	Versionlegajo      int
+	Versionnovedad     int
+	Versionliquidacion int
 }
 
 var instance Configuracion
