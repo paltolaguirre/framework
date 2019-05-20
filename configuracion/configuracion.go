@@ -8,9 +8,10 @@ import (
 )
 
 type Configuracion struct {
-	Ip     string
-	Namedb string
-	Url    string
+	Ip              string
+	Namedb          string
+	Url             string
+	Checkmonolitico bool
 }
 
 var instance Configuracion
