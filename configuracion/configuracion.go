@@ -15,6 +15,7 @@ type Configuracion struct {
 	Versionlegajo      int
 	Versionnovedad     int
 	Versionliquidacion int
+	Versionconcepto int
 }
 
 var instance Configuracion
