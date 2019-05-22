@@ -3,6 +3,7 @@ package framework
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
 )
 
 func RespondJSON(w http.ResponseWriter, status int, results interface{}) {
@@ -20,5 +21,5 @@ func RespondJSON(w http.ResponseWriter, status int, results interface{}) {
 }
 
 func RespondError(w http.ResponseWriter, code int, message string) {
-	RespondJSON(w, code, map[string]string{"error": message})
+	RespondJSON(w, code, map[string]string{"codigo": strconv.Itoa(code), "error": message})
 }
