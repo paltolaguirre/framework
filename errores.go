@@ -8,5 +8,5 @@ const (
 	Novedad                   = "La novedad con ID: "
 	Liquidacion               = "La liquidación con ID: "
 	Concepto                  = "El concepto con ID: "
-	MicroservicioEliminado    = "Se ha eliminado correctamente."
+	MicroservicioEliminado    = " se ha eliminado correctamente."
 )
