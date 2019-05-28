@@ -28,6 +28,12 @@ type Configuracion struct {
 	Versionliquidacion                int
 	Versionconcepto                   int
 	Versionsecurity                   int
+	Privacidadtablas                  []PrivacidadTablas
+}
+
+type PrivacidadTablas struct {
+	Tabla      string
+	Privacidad string
 }
 
 var instance Configuracion
@@ -39,6 +45,16 @@ func GetInstance() Configuracion {
 	}
 
 	return instance
+}
+
+func obtenerTablaPrivada(x string) PrivacidadTablas {
+
+	for i, n := range instance.Privacidadtablas {
+		if x == n.Tabla {
+			return instance.Privacidadtablas[i]
+		}
+	}
+	return instance.Privacidadtablas[0]
 }
 
 func obtenerDatosConfiguracion() {
