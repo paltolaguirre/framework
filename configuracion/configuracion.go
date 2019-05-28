@@ -8,15 +8,26 @@ import (
 )
 
 type Configuracion struct {
-	Ip                 string
-	Namedb             string
-	Url                string
-	Checkmonolitico    bool
-	Versionlegajo      int
-	Versionnovedad     int
-	Versionliquidacion int
-	Versionconcepto    int
-	Versionsecurity    int
+	Ip                                string
+	Namedb                            string
+	Passdb                            string
+	Protocolomonolitico               string
+	Dominiomonolitico                 string
+	Puertomonolitico                  string
+	Protocolomicroservicio            string
+	Dominiomicroservicio              string
+	Puertomicroserivicioautenticacion string
+	Puertomicroserviciolegajo         string
+	Puertomicroserivicionovedad       string
+	Puertomicroserivicioliquidacion   string
+	Puertomicroserivicioconcepto      string
+	Puertomicroseriviciohelpers       string
+	Checkmonolitico                   bool
+	Versionlegajo                     int
+	Versionnovedad                    int
+	Versionliquidacion                int
+	Versionconcepto                   int
+	Versionsecurity                   int
 }
 
 var instance Configuracion
