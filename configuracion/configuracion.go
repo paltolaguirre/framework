@@ -91,11 +91,11 @@ func obtenerDatosConfiguracion() {
 
 func getUrlMonolitico() string{
 
-	url := configuracion.Protocolomonolitico + "://" + configuracion.Dominiomonolitico + ":" + configuracion.Puertomonolitico + "/NXV/"
+	url := instance.Protocolomonolitico + "://" + instance.Dominiomonolitico + ":" + instance.Puertomonolitico + "/NXV/"
 	return url
 }
 
 func getUrlMicroservicio(puerto string) string{
-	url := configuracion.Protocolomicroservicio + "://" + configuracion.Dominiomicroservicio + ":" + puerto + "/api/"
+	url := instance.Protocolomicroservicio + "://" + instance.Dominiomicroservicio + ":" + puerto + "/api/"
 	return url
 }
