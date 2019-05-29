@@ -87,3 +87,15 @@ func obtenerDatosConfiguracion() {
 		fmt.Println("error:", err)
 	}
 }
+
+
+func getUrlMonolitico() string{
+
+	url := configuracion.Protocolomonolitico + "://" + configuracion.Dominiomonolitico + ":" + configuracion.Puertomonolitico + "/NXV/"
+	return url
+}
+
+func getUrlMicroservicio(puerto string) string{
+	url := configuracion.Protocolomicroservicio + "://" + configuracion.Dominiomicroservicio + ":" + puerto + "/api/"
+	return url
+}
