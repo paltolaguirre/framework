@@ -16,6 +16,7 @@ type Configuracion struct {
 	Puertomonolitico                  string
 	Protocolomicroservicio            string
 	Dominiomicroservicio              string
+	Puertomicroservicio               string
 	Puertomicroserivicioautenticacion string
 	Puertomicroserviciolegajo         string
 	Puertomicroserivicionovedad       string
