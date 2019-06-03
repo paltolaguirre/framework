@@ -94,10 +94,10 @@ func GetUrlMonolitico() string {
 	return url
 }
 
-func GetUrlMicroservicio() string {
+func GetUrlMicroservicio(microservicioPuerto string) string {
 	puerto := instance.Puertomicroservicio
 	if puerto == "" {
-		puerto = instance.Puertomicroservicioautenticacion
+		puerto = microservicioPuerto
 	}
 
 	url := instance.Protocolomicroservicio + "://" + instance.Dominiomicroservicio + ":" + puerto + "/api/"
