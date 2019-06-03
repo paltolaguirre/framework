@@ -8,28 +8,28 @@ import (
 )
 
 type Configuracion struct {
-	Ip                                string
-	Namedb                            string
-	Passdb                            string
-	Protocolomonolitico               string
-	Dominiomonolitico                 string
-	Puertomonolitico                  string
-	Protocolomicroservicio            string
-	Dominiomicroservicio              string
-	Puertomicroservicio               string
-	Puertomicroserivicioautenticacion string
-	Puertomicroserviciolegajo         string
-	Puertomicroserivicionovedad       string
-	Puertomicroserivicioliquidacion   string
-	Puertomicroserivicioconcepto      string
-	Puertomicroseriviciohelpers       string
-	Checkmonolitico                   bool
-	Versionlegajo                     int
-	Versionnovedad                    int
-	Versionliquidacion                int
-	Versionconcepto                   int
-	Versionsecurity                   int
-	Privacidadtablas                  []PrivacidadTablas
+	Ip                               string
+	Namedb                           string
+	Passdb                           string
+	Protocolomonolitico              string
+	Dominiomonolitico                string
+	Puertomonolitico                 string
+	Protocolomicroservicio           string
+	Dominiomicroservicio             string
+	Puertomicroservicio              string
+	Puertomicroservicioautenticacion string
+	Puertomicroserviciolegajo        string
+	Puertomicroservicionovedad       string
+	Puertomicroservicioliquidacion   string
+	Puertomicroservicioconcepto      string
+	Puertomicroserviciohelpers       string
+	Checkmonolitico                  bool
+	Versionlegajo                    int
+	Versionnovedad                   int
+	Versionliquidacion               int
+	Versionconcepto                  int
+	Versionsecurity                  int
+	Privacidadtablas                 []PrivacidadTablas
 }
 
 type PrivacidadTablas struct {
@@ -88,14 +88,18 @@ func obtenerDatosConfiguracion() {
 	}
 }
 
-
-func GetUrlMonolitico() string{
+func GetUrlMonolitico() string {
 
 	url := instance.Protocolomonolitico + "://" + instance.Dominiomonolitico + ":" + instance.Puertomonolitico + "/NXV/"
 	return url
 }
 
-func GetUrlMicroservicio(puerto string) string{
+func GetUrlMicroservicio() string {
+	puerto := instance.Puertomicroservicio
+	if puerto == "" {
+		puerto = instance.Puertomicroservicioautenticacion
+	}
+
 	url := instance.Protocolomicroservicio + "://" + instance.Dominiomicroservicio + ":" + puerto + "/api/"
 	return url
 }
