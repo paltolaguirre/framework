@@ -23,6 +23,7 @@ type Configuracion struct {
 	Puertomicroservicioliquidacion   string
 	Puertomicroservicioconcepto      string
 	Puertomicroserviciohelpers       string
+	Puertomicroservicioinformes      string
 	Checkmonolitico                  bool
 	Versionlegajo                    int
 	Versionnovedad                   int
