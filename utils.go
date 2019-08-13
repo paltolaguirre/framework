@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-func checkRegistroDefault(p_id int, w http.ResponseWriter) {
+func CheckRegistroDefault(p_id int, w http.ResponseWriter) {
 
 	if p_id < 0 {
 		RespondError(w, http.StatusNotFound, Eliminarmodificarregistrosdefaults)
@@ -12,7 +12,7 @@ func checkRegistroDefault(p_id int, w http.ResponseWriter) {
 	}
 }
 
-func checkParametroVacio(p_id int, w http.ResponseWriter) {
+func CheckParametroVacio(p_id int, w http.ResponseWriter) {
 
 	if p_id == 0 {
 		RespondError(w, http.StatusNotFound, IdParametroVacio)
