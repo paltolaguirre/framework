@@ -14,4 +14,5 @@ const (
 	Seleccionaronliquidacionescontabilizadas                    = "Se seleccionaron liquidaciones ya contabilizadas"
 	Modificarliquidacioncontabilizada                           = "La liquidación que se quiere modificar se encuentra contabilizada"
 	Eliminarliquidacioncontabilizada                            = "La liquidación que se quiere eliminar se encuentra contabilizada"
+	Eliminarmodificarregistrosdefaults                          = "No se puede Eliminar/Modificar registros defaults"
 )
