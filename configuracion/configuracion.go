@@ -11,6 +11,7 @@ type Configuracion struct {
 	Ip                               string
 	Namedb                           string
 	Passdb                           string
+	Ssldb                            string
 	Protocolomonolitico              string
 	Dominiomonolitico                string
 	Puertomonolitico                 string
