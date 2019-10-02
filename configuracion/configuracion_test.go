@@ -2,7 +2,7 @@ package configuracion
 
 import "testing"
 
-func TestGetConfig(t *testing.T) {
+func Test_GetConfig(t *testing.T) {
 	t.Run("Check Ip", func(t *testing.T) {
 		expected := "192.168.30.116"
 		got := GetInstance()
@@ -22,7 +22,7 @@ func TestGetConfig(t *testing.T) {
 	})
 }
 
-func TestGetUrlMonolitico(t *testing.T) {
+func Test_GetUrlMonolitico(t *testing.T) {
 	t.Run("Check GetUrlMonolitico", func(t *testing.T) {
 		expected := "https://192.168.30.112:8443/NXV/"
 		got := GetUrlMonolitico()
@@ -33,7 +33,7 @@ func TestGetUrlMonolitico(t *testing.T) {
 	})
 }
 
-func TestGetUrlMicroservicio(t *testing.T) {
+func Test_GetUrlMicroservicio(t *testing.T) {
 	t.Run("Check GetUrlMicroservicio", func(t *testing.T) {
 		expected := "http://localhost:80/api/"
 		got := GetUrlMicroservicio("80")
