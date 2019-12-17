@@ -25,12 +25,14 @@ type Configuracion struct {
 	Puertomicroservicioconcepto      string
 	Puertomicroserviciohelpers       string
 	Puertomicroservicioinformes      string
+	Puertomicroserviciosiradig       string
 	Checkmonolitico                  bool
 	Versionlegajo                    int
 	Versionnovedad                   int
 	Versionliquidacion               int
 	Versionconcepto                  int
 	Versionsecurity                  int
+	Versionsiradig                   int
 	Privacidadtablas                 []PrivacidadTablas
 }
 
