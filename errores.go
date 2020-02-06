@@ -8,7 +8,7 @@ const (
 	Novedad                                                     = "La novedad con ID: "
 	Liquidacion                                                 = "La liquidación con ID: "
 	Concepto                                                    = "El concepto con ID: "
-	Formula                                                     = "La formula con ID: "
+	Function                                                    = "La formula: "
 	MicroservicioEliminado                                      = " se ha eliminado correctamente."
 	Seleccioneunregistro                                        = "Seleccione por lo menos un registro."
 	Descripcionasientomanualcontableliquidacionescontabilizadas = "Contabilización automática de las Liquidaciones de Sueldos"
