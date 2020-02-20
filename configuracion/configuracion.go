@@ -8,34 +8,36 @@ import (
 )
 
 type Configuracion struct {
-	Ip                               string
-	Namedb                           string
-	Passdb                           string
-	Ssldb                            string
-	Protocolomonolitico              string
-	Dominiomonolitico                string
-	Puertomonolitico                 string
-	Protocolomicroservicio           string
-	Dominiomicroservicio             string
-	Puertomicroservicio              string
-	Puertomicroservicioautenticacion string
-	Puertomicroserviciolegajo        string
-	Puertomicroservicionovedad       string
-	Puertomicroservicioliquidacion   string
-	Puertomicroservicioconcepto      string
-	Puertomicroserviciohelpers       string
-	Puertomicroservicioinformes      string
-	Puertomicroserviciosiradig       string
-	Puertomicroservicioformula       string
-	Checkmonolitico                  bool
-	Versionlegajo                    int
-	Versionnovedad                   int
-	Versionliquidacion               int
-	Versionconcepto                  int
-	Versionsecurity                  int
-	Versionsiradig                   int
-	Versionformula                   int
-	Privacidadtablas                 []PrivacidadTablas
+	Ip                                       string
+	Namedb                                   string
+	Passdb                                   string
+	Ssldb                                    string
+	Protocolomonolitico                      string
+	Dominiomonolitico                        string
+	Puertomonolitico                         string
+	Protocolomicroservicio                   string
+	Dominiomicroservicio                     string
+	Puertomicroservicio                      string
+	Puertomicroservicioautenticacion         string
+	Puertomicroserviciolegajo                string
+	Puertomicroservicionovedad               string
+	Puertomicroservicioliquidacion           string
+	Puertomicroservicioconcepto              string
+	Puertomicroserviciohelpers               string
+	Puertomicroservicioinformes              string
+	Puertomicroserviciosiradig               string
+	Puertomicroservicioformula               string
+	Puertomicroservicioliquidacionfinalanual string
+	Checkmonolitico                          bool
+	Versionlegajo                            int
+	Versionnovedad                           int
+	Versionliquidacion                       int
+	Versionconcepto                          int
+	Versionsecurity                          int
+	Versionsiradig                           int
+	Versionformula                           int
+	Versionliquidacionfinalanual             int
+	Privacidadtablas                         []PrivacidadTablas
 }
 
 type PrivacidadTablas struct {
