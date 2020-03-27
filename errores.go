@@ -16,4 +16,5 @@ const (
 	Modificarliquidacioncontabilizada                           = "La liquidación que se quiere modificar se encuentra contabilizada"
 	Eliminarliquidacioncontabilizada                            = "La liquidación que se quiere eliminar se encuentra contabilizada"
 	Eliminarmodificarregistrosdefaults                          = "No se pueden Eliminar/Modificar registros predeterminados"
+	ErrorAutomigrate                                            = "No se pudo realizar la actualizacion de su cuenta correctamente. Vuelva a intentar mas tarde. Si el problema persiste pongase en contacto con nosotros"
 )
