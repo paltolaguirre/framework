@@ -36,6 +36,7 @@ type Configuracion struct {
 	Versionsiradig                   int
 	Versionformula                   int
 	Privacidadtablas                 []PrivacidadTablas
+	Tenanttest						 string
 }
 
 type PrivacidadTablas struct {
