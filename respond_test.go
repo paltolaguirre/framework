@@ -5,8 +5,6 @@ import (
 	"net/http/httptest"
 	"testing"
 	"time"
-
-	"github.com/xubiosueldos/conexionBD/structGormModel"
 )
 
 func Test_RespondError(t *testing.T) {
@@ -29,9 +27,16 @@ func Test_RespondError(t *testing.T) {
 	})
 }
 
+type JsonTest struct {
+	ID        int `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	DeletedAt *time.Time `sql:"index"`
+}
+
 func Test_RespondJSON(t *testing.T) {
 	t.Run("Check RespondJSON", func(context *testing.T) {
-		var body structGormModel.GormModel
+		var body JsonTest
 		body.ID = 1
 		body.CreatedAt = time.Date(2000, 01, 01, 01, 01, 01, 01, time.Local)
 		body.UpdatedAt = time.Date(2000, 01, 01, 01, 01, 01, 01, time.Local)
