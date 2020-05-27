@@ -27,6 +27,7 @@ type Configuracion struct {
 	Puertomicroservicioinformes      string
 	Puertomicroserviciosiradig       string
 	Puertomicroservicioformula       string
+	Puertomicroservicioactualizacion string
 	Checkmonolitico                  bool
 	Versionlegajo                    int
 	Versionnovedad                   int
