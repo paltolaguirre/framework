@@ -28,6 +28,7 @@ type Configuracion struct {
 	Puertomicroserviciosiradig       string
 	Puertomicroservicioformula       string
 	Puertomicroservicioactualizacion string
+	Puertomicroserviciotarea         string
 	Checkmonolitico                  bool
 	Versionlegajo                    int
 	Versionnovedad                   int
@@ -36,9 +37,11 @@ type Configuracion struct {
 	Versionsecurity                  int
 	Versionsiradig                   int
 	Versionformula                   int
+	Versiontarea                     int
 	Privacidadtablas                 []PrivacidadTablas
 	Tenanttest                       string
 	Tokenformulapublic               string
+	Codesecurity                     string
 }
 
 type PrivacidadTablas struct {
